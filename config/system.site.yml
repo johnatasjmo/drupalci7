@@ -1,0 +1,14 @@
+uuid: 18f2cb93-773c-4a04-b734-22d94bc99fd2
+name: drupalci7
+mail: jmo@logisticsmaven.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
