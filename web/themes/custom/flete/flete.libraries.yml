@@ -1,0 +1,14 @@
+global-styling:
+  css:
+    theme:
+      css/style.css: {}
+
+fontawesome:
+  version: 4.7.0
+  remote: //use.fontawesome.com/
+  js:
+    //use.fontawesome.com/f479fb1064.js: {}
+  license:
+    name: MIT
+    url: //opensource.org/licenses/mit-license.html
+    gpl-compatible: true

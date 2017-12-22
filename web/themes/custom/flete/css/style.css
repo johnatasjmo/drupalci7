@@ -1,0 +1,209 @@
+/**
+ * Place your custom styles here.
+ */
+
+ .jumbotron-top {
+   margin-top: 20px;
+   background: url("/sites/default/files/frontpage/lonely_road.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   color: #fafafa;
+   background-position: bottom 210px right 10px ;
+ }
+
+ .article-section-blue {
+    background-color: #60a9f5;
+    color: #fff;
+}
+
+.article-section-div {
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+}
+
+.article-section {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+/*better login*/
+/*header and size*/
+#auth_box {
+    width: 300px;
+    margin: -75px auto 0;
+    padding: 50px 0 0;
+    background: transparent;
+}
+
+#auth_box h1#the_logo {
+    text-align: center;
+    margin: 0;
+    padding: 0 0 40px;
+}
+
+#auth_box h1#the_logo img {
+    max-width: 250px;
+    color: white;
+}
+
+div#edit-mail--description {
+    display: none;
+}
+
+#auth_box a.panel-title {
+    display: none;
+}
+
+.user-register-form .form-item .panel-heading {
+    display: none;
+}
+
+.user-register-form .form-item .panel-body {
+    padding: 0;
+}
+
+#auth_box input[type="text"],
+  #auth_box input[type="password"] {
+    border-radius: 4px;
+    border: 2px solid #dce4ec;
+    padding: 5px;
+    font-size: 15px;
+    width: 100%;
+  }
+
+ #auth_box .login_link {
+     padding-bottom: 10px;
+ }
+
+#auth_box .password_link {
+    padding-bottom: 10px;
+}
+
+#auth_box span.fieldset-legend.js-form-required.form-required {
+    display: none;
+}
+
+/*border on user/register */
+div#edit-entity-prof-user.panel-default {
+    border: none;
+}
+
+div#edit-entity-prof-user--content {
+    padding-left: 0px;
+}
+
+div#edit-account {
+    margin-bottom: 0;
+}
+
+/* view /carga with no more tables*/
+
+@media only screen and (max-width: 800px) {
+
+    /* Force table to not be like tables anymore */
+	.no-more-tables table,
+	.no-more-tables thead,
+	.no-more-tables tbody,
+	.no-more-tables th,
+	.no-more-tables td,
+	.no-more-tables tr {
+		display: block;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.no-more-tables thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.no-more-tables tr { border: 1px solid #ccc; }
+
+	.no-more-tables td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+		white-space: normal;
+		text-align:left;
+	}
+
+	.no-more-tables td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+
+	/*
+	Label the data
+	*/
+	.no-more-tables td:before { content: attr(data-title); }
+}
+
+
+/*remove underscore link on tables*/
+.table a:not(.btn) {
+    text-decoration: unset;
+}
+
+/*backrgound to Tu Oferta block region*/
+.block-bid-form {
+    background-color: #eeeeee;
+    padding: 20px;
+    margin: 10px;
+}
+
+/* create carga node*/
+/* max width of the form*/
+form#node-carga-form {
+    max-width: 600px;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background-color: aliceblue;
+    margin: auto;
+}
+
+/*take out borders of header dates*/
+div#edit-field-carga-dates-0 {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/*remove header border*/
+div#edit-field-carga-dates-0 > .panel-heading {
+    display: none;
+}
+
+/*panel body for dates aligned to left*/
+div#edit-field-carga-dates-0 > .panel-body {
+    padding: 0;
+    background-color: aliceblue;
+}
+
+div#form-item-field-carga-weight-0-value > .label.control-label {
+display: table;
+}
+
+/* create carga header*/
+h1.page-header {
+text-align: center;
+}
+
+
+.file {
+    display: inline;
+    padding-right: 10px;
+}
