@@ -1,0 +1,22 @@
+uuid: dbe3b02d-4d6c-4305-985d-072ffdf9b0b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carga
+id: node.carga.status
+field_name: status
+entity_type: node
+bundle: carga
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

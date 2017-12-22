@@ -1,0 +1,20 @@
+uuid: fddd312a-4a87-40c5-b008-8aa450f59ca7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oferta
+  module:
+    - path
+id: node.oferta.path
+field_name: path
+entity_type: node
+bundle: oferta
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

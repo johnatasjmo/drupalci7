@@ -1,0 +1,21 @@
+route_planner_map_height: 300px
+route_planner_map_width: 100%
+route_planner_map_zoom: 10
+route_planner_map_defaultui: true
+route_planner_map_zoomcontrol: true
+route_planner_map_scrollwheel: true
+route_planner_map_maptypecontrol: true
+route_planner_map_scalecontrol: true
+route_planner_map_draggable: true
+route_planner_map_doubbleclick: true
+route_planner_map_streetviewcontrol: true
+route_planner_map_overviewmapcontrol: true
+route_planner_address: 'San Jose, Costa Rica'
+route_planner_address_end: true
+route_planner_unitsystem: false
+route_planner_api_key: AIzaSyA2fiAvPEm0hN61hokdL7_1uUeqiIWd6hI
+route_planner_api_language: '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2fiAvPEm0hN61hokdL7_1uUeqiIWd6h&language=ES&region=CR"></script>'
+_core:
+  default_config_hash: gWnlQQZuovwnInM3LgFMJTvDb0_Mwgr86cthsK9EI4Y
+langcode: es
+submit: 'Save configuration'

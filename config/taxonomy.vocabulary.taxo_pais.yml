@@ -1,0 +1,9 @@
+uuid: 12f0d24b-c896-41d3-ba22-404bf92581de
+langcode: es
+status: true
+dependencies: {  }
+name: Pais
+vid: taxo_pais
+description: ''
+hierarchy: 0
+weight: 0

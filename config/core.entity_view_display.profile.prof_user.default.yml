@@ -1,0 +1,30 @@
+uuid: 64285b90-7efa-4ab9-818c-12c27ea156d4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.profile.prof_user.field_prof_user_apellido
+    - field.field.profile.prof_user.field_prof_user_nombre
+    - profile.type.prof_user
+id: profile.prof_user.default
+targetEntityType: profile
+bundle: prof_user
+mode: default
+content:
+  field_prof_user_apellido:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_prof_user_nombre:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

@@ -1,0 +1,9 @@
+uuid: 4dd0467b-5b7e-43f8-b033-a9a5cb662d69
+langcode: en
+status: true
+dependencies: {  }
+name: 'Camion Type'
+vid: taxo_camiontype
+description: ''
+hierarchy: 0
+weight: 0

@@ -1,0 +1,151 @@
+uuid: c90314c5-ea13-4fac-b3c0-829a32bdcd38
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.carga.comment
+    - field.field.node.carga.field_carga_articulos
+    - field.field.node.carga.field_carga_dates
+    - field.field.node.carga.field_carga_des_coordinates
+    - field.field.node.carga.field_carga_des_country
+    - field.field.node.carga.field_carga_des_countrycode
+    - field.field.node.carga.field_carga_des_locality
+    - field.field.node.carga.field_carga_des_name
+    - field.field.node.carga.field_carga_des_postcode
+    - field.field.node.carga.field_carga_des_province
+    - field.field.node.carga.field_carga_des_sublocality
+    - field.field.node.carga.field_carga_distance
+    - field.field.node.carga.field_carga_driving
+    - field.field.node.carga.field_carga_ofert
+    - field.field.node.carga.field_carga_ori_coordinates
+    - field.field.node.carga.field_carga_ori_country
+    - field.field.node.carga.field_carga_ori_countrycode
+    - field.field.node.carga.field_carga_ori_locality
+    - field.field.node.carga.field_carga_ori_name
+    - field.field.node.carga.field_carga_ori_postcode
+    - field.field.node.carga.field_carga_ori_province
+    - field.field.node.carga.field_carga_ori_sublocality
+    - field.field.node.carga.field_carga_status
+    - field.field.node.carga.field_carga_taxo_camiontype
+    - field.field.node.carga.field_carga_taxo_cargatype
+    - field.field.node.carga.field_carga_weight
+    - node.type.carga
+  module:
+    - comment
+    - datetime_range
+    - geocoder_autocomplete
+id: node.carga.default
+targetEntityType: node
+bundle: carga
+mode: default
+content:
+  comment:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_carga_dates:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_carga_des_name:
+    weight: 3
+    settings:
+      size: '60'
+      placeholder: 'ciudad, barrio, distrito'
+      autocomplete_route_name: geocoder_autocomplete.autocomplete
+    third_party_settings: {  }
+    type: geocoder_autocomplete
+    region: content
+  field_carga_distance:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_carga_driving:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_carga_ori_name:
+    weight: 2
+    settings:
+      size: '60'
+      placeholder: 'ciudad, barrio, distrito'
+      autocomplete_route_name: geocoder_autocomplete.autocomplete
+    third_party_settings: {  }
+    type: geocoder_autocomplete
+    region: content
+  field_carga_taxo_camiontype:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings:
+      conditional_fields:
+        2197c187-e666-4c3e-8fdb-66922550557d:
+          dependee: field_carga_taxo_cargatype
+          settings:
+            state: visible
+            condition: value
+            grouping: AND
+            values_set: 1
+            value: ''
+            values: {  }
+            value_form:
+              -
+                target_id: '7'
+            effect: show
+            effect_options: {  }
+            selector: ''
+          entity_type: node
+          bundle: carga
+  field_carga_taxo_cargatype:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_carga_weight:
+    type: number
+    weight: 5
+    region: content
+    settings:
+      placeholder: Kilogramos
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_carga_articulos: true
+  field_carga_des_coordinates: true
+  field_carga_des_country: true
+  field_carga_des_countrycode: true
+  field_carga_des_locality: true
+  field_carga_des_postcode: true
+  field_carga_des_province: true
+  field_carga_des_sublocality: true
+  field_carga_ofert: true
+  field_carga_ori_coordinates: true
+  field_carga_ori_country: true
+  field_carga_ori_countrycode: true
+  field_carga_ori_locality: true
+  field_carga_ori_postcode: true
+  field_carga_ori_province: true
+  field_carga_ori_sublocality: true
+  field_carga_status: true
+  langcode: true
+  path: true
+  promote: true
+  status: true
+  sticky: true
+  title: true
+  translation: true
+  uid: true

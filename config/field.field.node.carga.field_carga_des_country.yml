@@ -1,0 +1,19 @@
+uuid: a2558af7-bcf1-4e7e-86be-1a8f40c8e933
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_des_country
+    - node.type.carga
+id: node.carga.field_carga_des_country
+field_name: field_carga_des_country
+entity_type: node
+bundle: carga
+label: 'Carga Des Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: ea1450e5-fabb-43fc-ad83-3619c83bc4c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_taxo_status_code
+    - taxonomy.vocabulary.taxo_status
+id: taxonomy_term.taxo_status.field_taxo_status_code
+field_name: field_taxo_status_code
+entity_type: taxonomy_term
+bundle: taxo_status
+label: taxo_status_code
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

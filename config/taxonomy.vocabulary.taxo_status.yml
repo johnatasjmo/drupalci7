@@ -1,0 +1,9 @@
+uuid: 06aa8689-9d43-45c5-a043-606b8bd6d4b5
+langcode: und
+status: true
+dependencies: {  }
+name: 'Carga Status'
+vid: taxo_status
+description: ''
+hierarchy: 0
+weight: 0

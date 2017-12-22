@@ -1,0 +1,43 @@
+uuid: 2cf51f46-7f6b-428d-99c5-2b02851ebac3
+langcode: en
+status: false
+dependencies:
+  module:
+    - bid
+    - node
+    - system
+    - user
+  theme:
+    - flete
+id: blockconfirmationtrucker
+theme: flete
+region: content
+weight: -6
+provider: null
+plugin: block_confirmation_trucker
+settings:
+  id: block_confirmation_trucker
+  label: 'Cargas Bids'
+  provider: bid
+  label_display: visible
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/node/*/edit\r\n/node/*/delete\r\n/node/add/carga"
+    negate: true
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      administrator: administrator
+      embarcador: embarcador
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

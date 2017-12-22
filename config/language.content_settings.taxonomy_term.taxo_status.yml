@@ -1,0 +1,16 @@
+uuid: 18893d7d-ba73-4258-97aa-8734ffb107f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taxo_status
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.taxo_status
+target_entity_type_id: taxonomy_term
+target_bundle: taxo_status
+default_langcode: site_default
+language_alterable: false

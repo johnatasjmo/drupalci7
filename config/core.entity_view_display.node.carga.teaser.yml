@@ -1,0 +1,27 @@
+uuid: 3cc8e400-a3f5-4a55-a257-172921141b37
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.carga.field_carga_dates
+    - field.field.node.carga.field_carga_ofert
+    - field.field.node.carga.field_carga_status
+    - node.type.carga
+  module:
+    - user
+id: node.carga.teaser
+targetEntityType: node
+bundle: carga
+mode: teaser
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_carga_dates: true
+  field_carga_ofert: true
+  field_carga_status: true
+  langcode: true

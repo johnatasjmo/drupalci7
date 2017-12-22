@@ -1,0 +1,14 @@
+uuid: a1b0dc9e-f019-4458-945c-0046ce840b82
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.embarcador
+  module:
+    - user
+id: user_add_role_action.embarcador
+label: 'Add the Embarcador role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: embarcador

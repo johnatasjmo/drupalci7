@@ -1,0 +1,36 @@
+uuid: a1004fb9-d6db-42e5-8602-bd5bc4659e4c
+langcode: en
+status: true
+dependencies:
+  module:
+    - bid
+    - ctools
+    - user
+  theme:
+    - flete
+id: bidform
+theme: flete
+region: content_right
+weight: 0
+provider: null
+plugin: bid_form
+settings:
+  id: bid_form
+  label: 'Bid form'
+  provider: bid
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      transportista: transportista
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

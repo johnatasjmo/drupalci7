@@ -1,0 +1,29 @@
+uuid: 2ac08895-e40b-4fb4-9a6c-1ccee9747636
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_taxo_cargatype
+    - node.type.carga
+    - taxonomy.vocabulary.taxo_cargatype
+id: node.carga.field_carga_taxo_cargatype
+field_name: field_carga_taxo_cargatype
+entity_type: node
+bundle: carga
+label: 'Tipo de Carga'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      taxo_cargatype: taxo_cargatype
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

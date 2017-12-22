@@ -1,0 +1,8 @@
+uuid: d9f680a7-2647-4e08-a61e-11519921b242
+langcode: en
+status: true
+dependencies: {  }
+id: carga_comments
+label: 'Carga Comments'
+target_entity_type_id: node
+description: 'Comments on carga content type'

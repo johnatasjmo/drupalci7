@@ -1,0 +1,18 @@
+uuid: 9a4ed4d5-a666-4277-b552-bed3f6b3f5c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carga
+id: node.carga.title
+field_name: title
+entity_type: node
+bundle: carga
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

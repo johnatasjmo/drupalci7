@@ -1,0 +1,7 @@
+status: '1'
+pattern: '[node:author:uid]-[node:field_ofert_carga:target_id]'
+php: 0
+dependencies:
+  config:
+    - node.type.oferta
+escape: 0

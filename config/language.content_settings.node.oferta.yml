@@ -1,0 +1,16 @@
+uuid: 13b12e83-fe26-4670-b0e9-cc51b1d823fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oferta
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.oferta
+target_entity_type_id: node
+target_bundle: oferta
+default_langcode: es
+language_alterable: false

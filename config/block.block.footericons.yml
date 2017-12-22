@@ -1,0 +1,25 @@
+uuid: 6958570d-ce3a-4b57-be55-75b98e98e38e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:dd9fd54a-800c-44a8-bbc5-d2107691463f'
+  module:
+    - block_content
+  theme:
+    - flete
+id: footericons
+theme: flete
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:dd9fd54a-800c-44a8-bbc5-d2107691463f'
+settings:
+  id: 'block_content:dd9fd54a-800c-44a8-bbc5-d2107691463f'
+  label: 'Footer Icons'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

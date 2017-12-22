@@ -1,0 +1,89 @@
+uuid: 5c75e31b-8dd4-4f60-885f-774ace4fd53e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.carga_comments.default
+    - core.entity_view_mode.node.full
+    - field.field.node.carga.comment
+    - field.field.node.carga.field_carga_articulos
+    - field.field.node.carga.field_carga_dates
+    - field.field.node.carga.field_carga_des_coordinates
+    - field.field.node.carga.field_carga_des_country
+    - field.field.node.carga.field_carga_des_countrycode
+    - field.field.node.carga.field_carga_des_locality
+    - field.field.node.carga.field_carga_des_name
+    - field.field.node.carga.field_carga_des_postcode
+    - field.field.node.carga.field_carga_des_province
+    - field.field.node.carga.field_carga_des_sublocality
+    - field.field.node.carga.field_carga_ofert
+    - field.field.node.carga.field_carga_ori_coordinates
+    - field.field.node.carga.field_carga_ori_country
+    - field.field.node.carga.field_carga_ori_countrycode
+    - field.field.node.carga.field_carga_ori_locality
+    - field.field.node.carga.field_carga_ori_name
+    - field.field.node.carga.field_carga_ori_postcode
+    - field.field.node.carga.field_carga_ori_province
+    - field.field.node.carga.field_carga_ori_sublocality
+    - field.field.node.carga.field_carga_status
+    - field.field.node.carga.field_carga_taxo_camiontype
+    - field.field.node.carga.field_carga_taxo_cargatype
+    - field.field.node.carga.field_carga_weight
+    - node.type.carga
+  module:
+    - comment
+    - datetime_range
+    - user
+id: node.carga.full
+targetEntityType: node
+bundle: carga
+mode: full
+content:
+  comment:
+    type: comment_default
+    weight: 2
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+  field_carga_dates:
+    type: daterange_custom
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      timezone_override: ''
+      date_format: 'd M'
+      separator: '-'
+    third_party_settings: {  }
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_carga_articulos: true
+  field_carga_des_coordinates: true
+  field_carga_des_country: true
+  field_carga_des_countrycode: true
+  field_carga_des_locality: true
+  field_carga_des_name: true
+  field_carga_des_postcode: true
+  field_carga_des_province: true
+  field_carga_des_sublocality: true
+  field_carga_ofert: true
+  field_carga_ori_coordinates: true
+  field_carga_ori_country: true
+  field_carga_ori_countrycode: true
+  field_carga_ori_locality: true
+  field_carga_ori_name: true
+  field_carga_ori_postcode: true
+  field_carga_ori_province: true
+  field_carga_ori_sublocality: true
+  field_carga_status: true
+  field_carga_taxo_camiontype: true
+  field_carga_taxo_cargatype: true
+  field_carga_weight: true
+  langcode: true

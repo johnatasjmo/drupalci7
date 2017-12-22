@@ -1,0 +1,31 @@
+uuid: c9ad8b7d-08ef-43a5-965a-ad78f4dfa1cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.taxo_status.field_taxo_status_code
+    - taxonomy.vocabulary.taxo_status
+  module:
+    - text
+id: taxonomy_term.taxo_status.default
+targetEntityType: taxonomy_term
+bundle: taxo_status
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_taxo_status_code:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,7 @@
+status: '1'
+pattern: '[node:field_carga_ori_name]-[node:field_carga_des_name]'
+php: 0
+dependencies:
+  config:
+    - node.type.carga
+escape: 0

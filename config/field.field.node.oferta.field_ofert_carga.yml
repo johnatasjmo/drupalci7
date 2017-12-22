@@ -1,0 +1,28 @@
+uuid: dcdecacb-11f8-4d6a-b0d3-c629ef535163
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ofert_carga
+    - node.type.carga
+    - node.type.oferta
+id: node.oferta.field_ofert_carga
+field_name: field_ofert_carga
+entity_type: node
+bundle: oferta
+label: Carga
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      carga: carga
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

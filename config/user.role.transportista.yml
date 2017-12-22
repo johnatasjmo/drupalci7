@@ -1,0 +1,16 @@
+uuid: a9b7ef0b-f737-4ce4-9417-421dc0958a3d
+langcode: en
+status: true
+dependencies: {  }
+id: transportista
+label: Transportista
+weight: 4
+is_admin: null
+permissions:
+  - 'edit own oferta content'
+  - 'update own prof_comp profile'
+  - 'update own prof_doc profile'
+  - 'update own prof_user profile'
+  - 'view own prof_comp profile'
+  - 'view own prof_doc profile'
+  - 'view own prof_user profile'

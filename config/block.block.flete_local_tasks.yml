@@ -1,0 +1,22 @@
+uuid: 8cc4f6a7-a6ea-43f0-b450-f2a153b9012b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - flete
+_core:
+  default_config_hash: qHdtze2DZ2mFfaJadxjZz6epm92_SN9SAFY4yJGl8Fo
+id: flete_local_tasks
+theme: flete
+region: header
+weight: -7
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

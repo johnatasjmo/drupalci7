@@ -1,0 +1,259 @@
+uuid: 1f599e87-900a-472a-930c-e3dae3d47e54
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment.default
+    - field.field.node.carga.comment
+    - field.field.node.carga.field_carga_articulos
+    - field.field.node.carga.field_carga_dates
+    - field.field.node.carga.field_carga_des_coordinates
+    - field.field.node.carga.field_carga_des_country
+    - field.field.node.carga.field_carga_des_countrycode
+    - field.field.node.carga.field_carga_des_locality
+    - field.field.node.carga.field_carga_des_name
+    - field.field.node.carga.field_carga_des_postcode
+    - field.field.node.carga.field_carga_des_province
+    - field.field.node.carga.field_carga_des_sublocality
+    - field.field.node.carga.field_carga_distance
+    - field.field.node.carga.field_carga_driving
+    - field.field.node.carga.field_carga_ofert
+    - field.field.node.carga.field_carga_ori_coordinates
+    - field.field.node.carga.field_carga_ori_country
+    - field.field.node.carga.field_carga_ori_countrycode
+    - field.field.node.carga.field_carga_ori_locality
+    - field.field.node.carga.field_carga_ori_name
+    - field.field.node.carga.field_carga_ori_postcode
+    - field.field.node.carga.field_carga_ori_province
+    - field.field.node.carga.field_carga_ori_sublocality
+    - field.field.node.carga.field_carga_status
+    - field.field.node.carga.field_carga_taxo_camiontype
+    - field.field.node.carga.field_carga_taxo_cargatype
+    - field.field.node.carga.field_carga_weight
+    - node.type.carga
+  module:
+    - cargaview
+    - comment
+    - user
+id: node.carga.default
+targetEntityType: node
+bundle: carga
+mode: default
+content:
+  comment:
+    weight: 31
+    label: above
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    type: comment_default
+    region: content
+  field_carga_articulos:
+    weight: 27
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_dates:
+    weight: 6
+    label: inline
+    settings:
+      separator: '-'
+    third_party_settings: {  }
+    type: carga_view
+    region: content
+  field_carga_des_coordinates:
+    weight: 18
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_des_country:
+    weight: 19
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_des_countrycode:
+    weight: 21
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_des_locality:
+    weight: 22
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_des_name:
+    weight: 23
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_des_postcode:
+    weight: 24
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_des_province:
+    weight: 25
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_des_sublocality:
+    weight: 26
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_distance:
+    weight: 33
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_driving:
+    weight: 32
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ofert:
+    weight: 8
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_carga_ori_coordinates:
+    weight: 10
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ori_country:
+    weight: 11
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ori_countrycode:
+    weight: 12
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ori_locality:
+    weight: 13
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ori_name:
+    weight: 14
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ori_postcode:
+    weight: 15
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ori_province:
+    weight: 16
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_ori_sublocality:
+    weight: 17
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_carga_status:
+    weight: 9
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_carga_taxo_camiontype:
+    weight: 29
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_carga_taxo_cargatype:
+    weight: 30
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_carga_weight:
+    weight: 28
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  langcode: true

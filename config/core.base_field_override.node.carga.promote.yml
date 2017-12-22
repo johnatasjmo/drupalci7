@@ -1,0 +1,22 @@
+uuid: 3f48fcc5-b6eb-457c-ac1d-2d21b4769ffa
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carga
+id: node.carga.promote
+field_name: promote
+entity_type: node
+bundle: carga
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

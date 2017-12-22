@@ -1,0 +1,19 @@
+uuid: 775392a9-7ecb-459d-b0a8-aed6ef22f8e4
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_prof_comp_ruc
+    - profile.type.prof_comp
+id: profile.prof_comp.field_prof_comp_ruc
+field_name: field_prof_comp_ruc
+entity_type: profile
+bundle: prof_comp
+label: RUC
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

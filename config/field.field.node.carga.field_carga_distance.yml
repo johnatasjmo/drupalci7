@@ -1,0 +1,19 @@
+uuid: 808e28af-3c4a-4feb-a98f-c5fb7a66701a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_distance
+    - node.type.carga
+id: node.carga.field_carga_distance
+field_name: field_carga_distance
+entity_type: node
+bundle: carga
+label: Distancia
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

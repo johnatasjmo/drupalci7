@@ -1,0 +1,18 @@
+uuid: 8bf93457-217b-4662-a96d-15ec284acffe
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oferta
+id: node.oferta.title
+field_name: title
+entity_type: node
+bundle: oferta
+label: Oferta
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

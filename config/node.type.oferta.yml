@@ -1,0 +1,41 @@
+uuid: 59913f99-e760-40c2-8eb5-6eb48da1b322
+langcode: en
+status: true
+dependencies:
+  module:
+    - hide_revision_field
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  hide_revision_field:
+    personalization:
+      50:
+        hide: false
+      51:
+        hide: false
+      52:
+        hide: false
+      53:
+        hide: false
+      54:
+        hide: false
+      55:
+        hide: false
+      56:
+        hide: false
+      57:
+        hide: false
+      58:
+        hide: false
+      63:
+        hide: false
+name: Oferta
+type: oferta
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

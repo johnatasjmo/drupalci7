@@ -1,0 +1,22 @@
+uuid: 3bb1dce6-ec2a-4161-b942-13bfcfee30d4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: path_carga
+label: 'Path Carga'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:nid]/[node:title]'
+selection_criteria:
+  05ed0137-3ec7-4fe1-bbc3-b280d5b55b42:
+    id: node_type
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 05ed0137-3ec7-4fe1-bbc3-b280d5b55b42
+selection_logic: and
+weight: -5
+relationships: {  }

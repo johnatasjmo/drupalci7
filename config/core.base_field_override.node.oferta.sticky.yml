@@ -1,0 +1,22 @@
+uuid: c52da22f-7f57-4af2-bdce-c94afa019d00
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oferta
+id: node.oferta.sticky
+field_name: sticky
+entity_type: node
+bundle: oferta
+label: 'Sticky at top of lists'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

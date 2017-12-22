@@ -1,0 +1,23 @@
+uuid: befe9061-3b68-4366-badc-2a9407ab20f2
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.oferta.field_ofert_carga
+    - field.field.node.oferta.field_ofert_precio
+    - node.type.oferta
+  module:
+    - user
+id: node.oferta.teaser
+targetEntityType: node
+bundle: oferta
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_ofert_carga: true
+  field_ofert_precio: true
+  langcode: true

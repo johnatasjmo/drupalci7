@@ -1,0 +1,33 @@
+uuid: 69d8e5a3-c545-4b70-86fb-d8a9ef57281a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.prof_doc.field_prof_doc_image1
+    - field.field.profile.prof_doc.field_prof_doc_image2
+    - image.style.thumbnail
+    - profile.type.prof_doc
+  module:
+    - image
+id: profile.prof_doc.default
+targetEntityType: profile
+bundle: prof_doc
+mode: default
+content:
+  field_prof_doc_image1:
+    weight: 2
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_prof_doc_image2:
+    weight: 1
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+hidden: {  }

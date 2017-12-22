@@ -1,0 +1,38 @@
+uuid: 281ac74f-78e8-4aaf-9644-01bc356fde80
+langcode: es
+status: true
+dependencies:
+  module:
+    - hide_revision_field
+third_party_settings:
+  hide_revision_field:
+    personalization:
+      50:
+        hide: false
+      51:
+        hide: false
+      52:
+        hide: false
+      53:
+        hide: false
+      54:
+        hide: false
+      55:
+        hide: false
+      56:
+        hide: false
+      57:
+        hide: false
+      58:
+        hide: false
+      63:
+        hide: false
+_core:
+  default_config_hash: KuyA4NHPXcmKAjRtwa0vQc2ZcyrUJy6IlS2TAyMNRbc
+name: 'Basic page'
+type: page
+description: 'Use <em>basic pages</em> for your static content, such as an ''About us'' page.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

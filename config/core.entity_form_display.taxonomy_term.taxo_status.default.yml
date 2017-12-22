@@ -1,0 +1,38 @@
+uuid: 57554cab-2808-4bed-a643-e8b8c57d8e48
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.taxo_status.field_taxo_status_code
+    - taxonomy.vocabulary.taxo_status
+id: taxonomy_term.taxo_status.default
+targetEntityType: taxonomy_term
+bundle: taxo_status
+mode: default
+content:
+  field_taxo_status_code:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  description: true
+  path: true

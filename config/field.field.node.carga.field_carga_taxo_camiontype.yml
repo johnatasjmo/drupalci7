@@ -1,0 +1,29 @@
+uuid: 58d1766e-cebc-48da-b2ed-536936f8ab59
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_taxo_camiontype
+    - node.type.carga
+    - taxonomy.vocabulary.taxo_camiontype
+id: node.carga.field_carga_taxo_camiontype
+field_name: field_carga_taxo_camiontype
+entity_type: node
+bundle: carga
+label: 'Tipo de Camion'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      taxo_camiontype: taxo_camiontype
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

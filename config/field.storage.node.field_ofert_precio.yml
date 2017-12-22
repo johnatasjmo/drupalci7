@@ -1,0 +1,20 @@
+uuid: 3d3f9a6e-32a9-44ef-8bb2-52a49b8f9777
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_ofert_precio
+field_name: field_ofert_precio
+entity_type: node
+type: decimal
+settings:
+  precision: 10
+  scale: 2
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

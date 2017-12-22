@@ -1,0 +1,21 @@
+uuid: c39720a3-156a-4c82-9e0a-65856c214eb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_carga_des_name
+field_name: field_carga_des_name
+entity_type: node
+type: string
+settings:
+  max_length: 150
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

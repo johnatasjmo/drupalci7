@@ -1,0 +1,50 @@
+uuid: ac072e68-129a-4804-b4a2-d1cb64535648
+langcode: en
+status: true
+dependencies:
+  module:
+    - bid
+    - ctools
+    - node
+    - system
+    - user
+  theme:
+    - flete
+id: blockconfirmationtrucker_2
+theme: flete
+region: content
+weight: 0
+provider: null
+plugin: block_confirmation_trucker
+settings:
+  id: block_confirmation_trucker
+  label: 'Block Confirmation Trucker'
+  provider: bid
+  label_display: visible
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      embarcador: embarcador
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+  request_path:
+    id: request_path
+    pages: "/node/*/delete\r\n/node/add/carga"
+    negate: true
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

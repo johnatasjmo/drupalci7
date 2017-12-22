@@ -1,0 +1,22 @@
+uuid: e4ddacb0-f594-446c-b1be-70d9ad47a5f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.carga_comments
+    - field.field.comment.carga_comments.field_carga_comments_body
+id: comment.carga_comments.default
+targetEntityType: comment
+bundle: carga_comments
+mode: default
+content:
+  field_carga_comments_body:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+hidden:
+  langcode: true
+  links: true

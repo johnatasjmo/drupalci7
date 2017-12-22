@@ -1,0 +1,16 @@
+uuid: 9edf4e7e-e68a-4300-a394-93fc7f35b654
+langcode: es
+status: true
+dependencies: {  }
+id: prof_comp
+label: Empresa
+registration: false
+multiple: false
+roles:
+  embarcador: embarcador
+  transportista: transportista
+  authenticated: '0'
+  administrator: '0'
+weight: 0
+use_revisions: false
+description: ''

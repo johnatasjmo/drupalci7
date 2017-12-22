@@ -1,0 +1,11 @@
+uuid: c2ee648d-a276-4758-a4c1-59d358854a84
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taxo_camiontype
+id: taxonomy_term.taxo_camiontype
+target_entity_type_id: taxonomy_term
+target_bundle: taxo_camiontype
+default_langcode: zxx
+language_alterable: false

@@ -1,0 +1,21 @@
+uuid: 50f8c0d6-4570-4237-88b8-db34fb48c86e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_carga_ori_sublocality
+field_name: field_carga_ori_sublocality
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

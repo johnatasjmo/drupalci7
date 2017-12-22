@@ -1,0 +1,19 @@
+uuid: 548e650d-b3ee-495d-b88f-76a091ef3834
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_driving
+    - node.type.carga
+id: node.carga.field_carga_driving
+field_name: field_carga_driving
+entity_type: node
+bundle: carga
+label: Driving
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

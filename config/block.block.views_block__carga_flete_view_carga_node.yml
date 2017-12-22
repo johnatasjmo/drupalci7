@@ -1,0 +1,33 @@
+uuid: f84ca82b-6c6b-455a-8f71-13ca2afcf7a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.carga
+  module:
+    - ctools
+    - views
+  theme:
+    - flete
+id: views_block__carga_flete_view_carga_node
+theme: flete
+region: content_left
+weight: 0
+provider: null
+plugin: 'views_block:carga-flete_view_carga_node'
+settings:
+  id: 'views_block:carga-flete_view_carga_node'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,20 @@
+uuid: d4d47d29-cf6a-4a56-869f-32e2ab0e219b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carga
+  module:
+    - path
+id: node.carga.path
+field_name: path
+entity_type: node
+bundle: carga
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

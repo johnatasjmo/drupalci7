@@ -1,0 +1,6 @@
+status: '1'
+pattern: '[view:id]'
+php: 0
+dependencies:
+  config:
+    - views.view.view_ofertas

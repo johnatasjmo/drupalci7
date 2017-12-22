@@ -1,0 +1,12 @@
+default_language: en
+paths:
+  - /admin
+  - '/admin/*'
+  - '/admin*'
+  - '/node/add/*'
+  - '/node/*/edit'
+  - '/node/*/translations'
+  - /node
+_core:
+  default_config_hash: S2rXFVI6PJHVSlz1qNTQdaYkGhHChUfn4Rrp4EEa38A
+langcode: es

@@ -1,0 +1,19 @@
+uuid: cd1157b5-bc10-433e-b8d0-e513f5352ea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_ori_sublocality
+    - node.type.carga
+id: node.carga.field_carga_ori_sublocality
+field_name: field_carga_ori_sublocality
+entity_type: node
+bundle: carga
+label: 'Carga Ori Sublocality'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,9 @@
+uuid: dd74c1d8-0bbd-42fd-8c61-797447edec94
+langcode: en
+status: true
+dependencies: {  }
+name: 'Carga Type'
+vid: taxo_cargatype
+description: ''
+hierarchy: 0
+weight: 0
