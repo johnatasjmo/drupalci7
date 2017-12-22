@@ -1,0 +1,7 @@
+name: cargaview
+type: module
+description: modifies carga node fields
+core: 8.x
+package: Flete
+dependencies:
+  - field

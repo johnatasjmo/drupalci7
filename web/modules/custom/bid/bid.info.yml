@@ -1,0 +1,5 @@
+name: Bid
+type: module
+description: Bid features
+core: 8.x
+package: Flete

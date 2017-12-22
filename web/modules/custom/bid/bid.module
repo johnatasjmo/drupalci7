@@ -1,0 +1,216 @@
+<?php
+
+/**
+ * @file
+ * Contains bid.module.
+ */
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\node\Entity\Node;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function bid_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the bid module.
+    case 'help.page.bid':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Bid features') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function bid_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  $current_node = \Drupal::routeMatch()->getParameter('node');
+  if(isset($current_node) && $form_id == 'node_oferta_form' && $current_node->getType() == 'carga' ) {
+    $form['field_ofert_carga']['#attributes']['class'][] = 'hidden';
+    $form['revision_information']['#attributes']['class'][] = 'hidden';
+    $form['actions']['submit']['#submit'][] = 'bi_form_ofertas_submit';
+    $form['actions']['submit']['#value'] = t("Publicar Oferta");
+    $form['actions']['submit']['#attributes']['class'][] = 'btn-success';
+
+    // Cancel button just when edit node oferta.
+    if (isset($_GET['op']) && $_GET['op'] == 'edit') {
+      // Adding Cancel button.
+      $current_path = \Drupal::service('path.current')->getPath();
+      $form['actions']['cancel'] = array(
+        '#markup' => '<a href="' . $current_path . '">' . t("Cancelar") . '</a>',
+        '#weight' => 20,
+      );
+    }
+  }
+
+}
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function bid_node_insert(Drupal\Core\Entity\EntityInterface $entity) {
+
+  // Drupal Message when node oferta is created.
+  if($entity->getType() == "oferta"){
+
+    // Node Carga ID.
+    $id_node_carga = $entity->get('field_ofert_carga')->target_id;
+
+    /** @var \Drupal\Node\Entity\Node $node_oferta */
+    $node_oferta = Node::load($id_node_carga);
+
+    // Node Carga Title.
+    $title = $node_oferta->getTitle();
+
+    drupal_set_message("Se ha publicado tu oferta a " . $title);
+  }
+}
+
+
+
+/**
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function bi_form_ofertas_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $current_node = \Drupal::routeMatch()->getParameter('node');
+
+  if (isset($_SESSION['messages'])) {
+
+    // Clean the default message when node oferta is created..
+    unset($_SESSION['messages']['status'][1]);
+  }
+
+    $form_state->setRedirect('entity.node.canonical', ['node' => $current_node->id()]
+  );
+}
+
+/**
+ * @param $variables
+ */
+function bid_preprocess_views_view_field(&$variables){
+
+  $view = $variables['view'];
+  $id = $view->storage->id();
+
+  // Value to show in the twig.
+  $field_custom_text = "default";
+
+  switch ($id){
+    case 'cargas_bids':
+
+      /** @var \Drupal\views\Plugin\views\field\EntityField $field */
+      $field = $variables['field'];
+
+      //  Field label
+      $label = $field->label();
+
+      if($label == "Accion") {
+
+        $row = $variables['row'];
+
+        // Getting the node carga.
+        $carga_id = $row->node_field_data_node__field_ofert_carga_nid;
+        $node_carga = Node::load($carga_id);
+
+        // Value trucker in the row.
+        $relation_users = $row->users_field_data_node_field_data_uid;
+
+        if ($node_carga != NULL) {
+
+          // ID Closed-Awarded
+          $id_closed_awarded = 2;
+
+          // Requests for Quotation Status
+          $status = $node_carga->get('field_carga_status')->target_id;
+
+          if ($status == $id_closed_awarded) {
+
+            // Empty does not show "Seleccionar oferta".
+            $field_custom_text = "empty";
+
+            // Value Trucker Selected.
+            $awarded = $node_carga->get('field_carga_ofert')->target_id;
+
+            if ($awarded == $relation_users) {
+              $field_custom_text = "Nominado";
+            }
+          }
+
+        }
+        $variables['field_custom_text'] = $field_custom_text;
+      }
+
+      break;
+
+    default:
+      break;
+
+  }
+}
+
+/**
+ * Implements hook_cron().
+ */
+function bid_cron() {
+  bid_RFQ_checker();
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function bid_theme_registry_alter(&$theme_registry) {
+  $theme_registry['views_view_field']['path'] = drupal_get_path('module', 'bid') . '/templates/views';
+}
+
+/**
+ * This method is to validate if availability date is greater than today
+ * In all the Requests for Quotation.
+ *
+ */
+function bid_RFQ_checker(){
+
+  $message = "Checking the dates...";
+
+  \Drupal::logger('BID')->notice($message);
+
+  $entity_type ="carga";
+
+  $query = \Drupal::entityQuery('node')->condition('type',$entity_type);
+  $nids = $query->execute();
+
+  if(!empty($nids)) {
+    $storage_handler = \Drupal::entityTypeManager()->getStorage('node');
+    $entities = $storage_handler->loadMultiple($nids);
+
+    foreach ($entities as $entity){
+
+      // Today date
+      $today = date('Y-m-d') ;
+
+      // End Date
+      $field_carga_dates = $entity->get('field_carga_dates')->end_value;
+
+      // DateTime
+      $today_dt = new DateTime($today);
+      $expire_dt = new DateTime($field_carga_dates);
+
+      $id_open = 1;
+
+      if ($expire_dt <  $today_dt && $entity->get('field_carga_status')->target_id == $id_open) {
+        $message_date = "Today : ". $today . " is greater than End Date ". $field_carga_dates. " the RFQ number ".$entity->id() . " will be closed.";
+        \Drupal::logger('BID')->notice($message_date);
+
+        $id_closed = 3;
+
+        $entity->field_carga_status = $id_closed;
+        $entity->save();
+      }
+    }
+  }
+}

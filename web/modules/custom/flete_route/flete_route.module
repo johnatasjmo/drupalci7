@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * Contains flete_route.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use \Drupal\Core\Form\FormStateInterface;
+use \Drupal\Core\StringTranslation\TranslatableMarkup ;
+
+/**
+ * Implements hook_help().
+ */
+function flete_route_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the flete_route module.
+    case 'help.page.flete_route':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Flete Route Module') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function flete_route_page_attachments(array &$attachments) {
+  // Attaching CSS
+  $attachments['#attached']['library'][] = 'flete_route/route';
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function flete_route_form_route_planner_address_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  /** @var \Drupal\Node\Entity\Node $carga_node */
+  $carga_node = \Drupal::routeMatch()->getParameter('node');
+
+  if ($carga_node != NULL && $carga_node->getType() ==  'carga') {
+
+    $origin = $carga_node->get('field_carga_ori_name')->value;
+    $destination = $carga_node->get('field_carga_des_name')->value;
+
+    $form['start']['#value'] = $origin;
+    $form['end']['#value'] = $destination;
+
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function flete_route_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+  if ($form_id == "node_carga_form" || $form_id == "node_carga_edit_form") {
+
+    $form['#attached']['library'][] = 'flete_route/route-js';
+    $form['#validate'][] = 'flete_carga_form_validate';
+    
+  }
+}
+function flete_carga_form_validate(&$form, FormStateInterface $form_state){
+
+  $distance = $form_state->getValue('field_carga_distance')[0]['value'];
+  $driving = $form_state->getValue('field_carga_driving')[0]['value'];
+
+  $error ="No encontramos el origen o destino, intente un barrio o canton mas especifico";
+
+  if ($distance == '' || $driving == "") {
+    $form_state->setError($form, $error);
+  }
+
+}

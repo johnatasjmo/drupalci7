@@ -1,0 +1,5 @@
+name: flete_route
+type: module
+description: Flete Route Module
+core: 8.x
+package: Flete

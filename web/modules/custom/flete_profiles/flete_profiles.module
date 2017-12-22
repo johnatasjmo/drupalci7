@@ -1,0 +1,105 @@
+<?php
+
+/**
+ * @file
+ * Contains flete_profiles.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function flete_profiles_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the flete_profiles module.
+    case 'help.page.flete_profiles':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Changes login, registration, reset and profiles for transportista and embarcador') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function flete_profiles_theme() {
+  return [
+    'flete_profiles' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function flete_profiles_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'user_register_form' || $form_id == 'user_login_form' || $form_id == 'user_pass') {
+    // Add a custom class.
+    $form['actions']['submit']['#attributes']['class'][] = 'btn-block';
+    $form['actions']['submit']['#attributes']['class'][] = 'btn-info';
+  }
+
+  switch ($form_id) {
+    case "user_register_form":
+      $form['actions']['submit']['#value'] = t('Crear una cuenta');
+      break;
+    case "user_login_form":
+      $form['actions']['submit']['#value'] = t('Ingresar');
+      break;
+    case "user_pass":
+      $form['actions']['submit']['#value'] = t('Enviar nueva contraseña');
+      break;
+    case "user_form":
+      if (in_array('transportista', \Drupal::currentUser()->getRoles()) ||
+        in_array('embarcador', \Drupal::currentUser()->getRoles())) {
+        $form['field_user_role']['#access'] = FALSE;
+      }
+      $form['actions']['submit']['#attributes']['class'][] = 'pull-right';
+      $form['actions']['submit']['#submit'][]  = 'flete_profile_user_form_submit';
+      break;
+    case "profile_prof_comp_edit_form":
+    case "profile_prof_doc_edit_form":
+    case "profile_prof_user_edit_form":
+    case "profile_prof_comp_add_form":
+    case "profile_prof_doc_add_form":
+    case "profile_prof_user_add_form":
+      $form['actions']['submit']['#attributes']['class'][] = 'pull-right';
+      $form['actions']['submit']['#submit'][]  = 'flete_profile_user_form_submit';
+      break;
+  }
+}
+
+/**
+ * Custom callback handler.
+ */
+function flete_profile_user_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  drupal_get_messages('status', TRUE);
+  drupal_set_message(t('El perfil ha sido actualizado'));
+}
+
+/**
+ * Implements hook_user_login().
+ */
+function flete_profiles_user_login(\Drupal\user\UserInterface $account) {
+  // Default login destination to the user.
+  $current_request = \Drupal::service('request_stack')->getCurrentRequest();
+  if (!$current_request->query->get('destination')) {
+    if (in_array('embarcador', $account->getRoles())) {
+      $current_request->query->set(
+        'destination',
+        \Drupal\Core\Url::fromRoute('view.view_mis_cargas.page_1')->toString()
+      );
+    }
+    elseif(in_array('transportista', $account->getRoles())) {
+      $current_request->query->set(
+        'destination',
+        \Drupal\Core\Url::fromRoute('view.mis_ofertas.page_1')->toString()
+      );
+    }
+  }
+}
