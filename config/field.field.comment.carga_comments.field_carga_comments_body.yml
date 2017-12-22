@@ -1,0 +1,19 @@
+uuid: ecf9f715-0fb5-4700-bac2-4e329a83153b
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.carga_comments
+    - field.storage.comment.field_carga_comments_body
+id: comment.carga_comments.field_carga_comments_body
+field_name: field_carga_comments_body
+entity_type: comment
+bundle: carga_comments
+label: 'Comments Carga'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

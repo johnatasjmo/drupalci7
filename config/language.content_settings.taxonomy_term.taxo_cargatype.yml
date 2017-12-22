@@ -1,0 +1,11 @@
+uuid: c820a647-5b1e-4c24-9724-30abb44eace4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taxo_cargatype
+id: taxonomy_term.taxo_cargatype
+target_entity_type_id: taxonomy_term
+target_bundle: taxo_cargatype
+default_langcode: zxx
+language_alterable: false

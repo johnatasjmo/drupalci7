@@ -1,0 +1,18 @@
+uuid: 8a893514-ff75-4b15-b628-66a37ce2c50c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carga
+id: node.carga.created
+field_name: created
+entity_type: node
+bundle: carga
+label: 'Authored on'
+description: 'The time that the node was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

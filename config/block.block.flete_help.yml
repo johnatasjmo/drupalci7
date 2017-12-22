@@ -1,0 +1,22 @@
+uuid: f08d84bc-5b57-4221-84ae-7601e3cac10d
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - flete
+_core:
+  default_config_hash: MhtNdV__HKRTab0ZPjkPNfYL4Ng4UPBucDLoC7Rg5Eo
+id: flete_help
+theme: flete
+region: help
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

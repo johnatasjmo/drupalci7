@@ -1,0 +1,22 @@
+uuid: cfc3e76d-bce8-4309-8e02-6a40a628bc36
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: path_oferta
+label: 'Path Oferta'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:nid]/[node:field_ofert_carga:entity]'
+selection_criteria:
+  1b3f100b-657c-4336-868a-152ae2167957:
+    id: node_type
+    bundles:
+      oferta: oferta
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1b3f100b-657c-4336-868a-152ae2167957
+selection_logic: and
+weight: -5
+relationships: {  }

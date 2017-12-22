@@ -1,0 +1,48 @@
+<?php
+
+/**
+ * @file
+ * Contains cargaview.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cargaview_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cargaview module.
+    case 'help.page.cargaview':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('modifies carga node fields') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function cargaview_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'node_carga_form' || $form_id == 'node_carga_edit_form') {
+    // Change field title.
+    $form['field_carga_dates']['widget'][0]['value']['#title'] = t('Start date');
+    // Change format to d/m/y.
+    $form['field_carga_dates']['widget'][0]['value']['#format'] = 'd/m/Y';
+    $form['field_carga_dates']['widget'][0]['value']['#date_date_format'] = 'd/m/Y';
+    $form['field_carga_dates']['widget'][0]['value']['#date_date_element'] = 'text';
+
+    // Change field title.
+    $form['field_carga_dates']['widget'][0]['end_value']['#title'] = t('End date');
+    // Change format to d/m/y.
+    $form['field_carga_dates']['widget'][0]['end_value']['#format'] = 'd/m/Y';
+    $form['field_carga_dates']['widget'][0]['end_value']['#date_date_format'] = 'd/m/Y';
+    $form['field_carga_dates']['widget'][0]['end_value']['#date_date_element'] = 'text';
+
+    // Attached daterange picler library.
+    $form['#attached']['library'][] = 'cargaview/daterange-picker';
+  }
+}

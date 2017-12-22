@@ -1,0 +1,14 @@
+uuid: 3b80dd22-3963-4bc6-9533-3544835ce8eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.transportista
+  module:
+    - user
+id: user_remove_role_action.transportista
+label: 'Remove the Transportista role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: transportista

@@ -1,0 +1,29 @@
+uuid: 4cd12094-ada7-40f6-af3e-10f959152835
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.prof_market.field_prof_market_comments
+    - field.field.profile.prof_market.field_prof_market_vip
+    - profile.type.prof_market
+id: profile.prof_market.default
+targetEntityType: profile
+bundle: prof_market
+mode: default
+content:
+  field_prof_market_comments:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_prof_market_vip:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden: {  }

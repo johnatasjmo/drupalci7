@@ -1,0 +1,19 @@
+uuid: b8a91eb9-90fb-4b80-b8ad-d67df2a17e6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_ori_name
+    - node.type.carga
+id: node.carga.field_carga_ori_name
+field_name: field_carga_ori_name
+entity_type: node
+bundle: carga
+label: Origen
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

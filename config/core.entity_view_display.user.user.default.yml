@@ -1,8 +1,9 @@
-uuid: 198e8ae2-0482-490c-a09e-4fed42eeec78
-langcode: en
+uuid: 25214132-a214-433b-9aab-7d182c732c34
+langcode: es
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_user_role
     - field.field.user.user.user_picture
     - image.style.thumbnail
   module:
@@ -15,8 +16,15 @@ targetEntityType: user
 bundle: user
 mode: default
 content:
-  member_for:
-    weight: 5
+  field_user_role:
+    weight: 1
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
     region: content
   user_picture:
     type: image
@@ -27,4 +35,10 @@ content:
       image_link: content
     third_party_settings: {  }
     label: hidden
-hidden: {  }
+hidden:
+  langcode: true
+  member_for: true
+  profile_datos_personales: true
+  profile_prof_comp: true
+  profile_prof_market: true
+  profile_prof_user: true

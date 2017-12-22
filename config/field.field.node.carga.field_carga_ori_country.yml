@@ -1,0 +1,19 @@
+uuid: d3b3307d-d8f0-4f39-9632-360bf63546f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_ori_country
+    - node.type.carga
+id: node.carga.field_carga_ori_country
+field_name: field_carga_ori_country
+entity_type: node
+bundle: carga
+label: 'Carga Ori Country'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

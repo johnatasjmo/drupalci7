@@ -1,0 +1,11 @@
+daterange-picker:
+  version: 1.x
+  css:
+    theme:
+      css/daterangepicker.css: {}
+  js:
+    js/moment.js: {}
+    js/daterangepicker.js: {}
+    js/altereddaterangepicker.js: {}
+  dependencies:
+    - core/jquery

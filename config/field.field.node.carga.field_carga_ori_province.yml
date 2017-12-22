@@ -1,0 +1,19 @@
+uuid: fd028aa6-902f-4627-bd3c-590a96530597
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_ori_province
+    - node.type.carga
+id: node.carga.field_carga_ori_province
+field_name: field_carga_ori_province
+entity_type: node
+bundle: carga
+label: 'Carga Ori  Province'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

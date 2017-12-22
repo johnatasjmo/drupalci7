@@ -1,0 +1,16 @@
+uuid: c45e5b8c-12a5-4c24-9a76-3cd2e677662c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carga
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.carga
+target_entity_type_id: node
+target_bundle: carga
+default_langcode: es
+language_alterable: false

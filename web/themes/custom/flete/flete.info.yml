@@ -1,0 +1,28 @@
+core: 8.x
+type: theme
+version: 0.1
+base theme: bootstrap
+
+name: 'Flete'
+description: 'flete subtheme'
+package: 'Bootstrap'
+
+regions:
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content_top: 'Content top'
+  content_right: 'Content right'
+  content_left: 'Content left'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  footer: 'Footer'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+
+libraries:
+  - 'flete/global-styling'
+  - 'flete/fontawesome'

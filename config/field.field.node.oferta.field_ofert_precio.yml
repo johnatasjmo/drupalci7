@@ -1,0 +1,23 @@
+uuid: 341c7401-ec41-4669-b8a9-da755ef51981
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ofert_precio
+    - node.type.oferta
+id: node.oferta.field_ofert_precio
+field_name: field_ofert_precio
+entity_type: node
+bundle: oferta
+label: Precio
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: !!float 1
+  max: !!float 10000
+  prefix: USD
+  suffix: ''
+field_type: decimal

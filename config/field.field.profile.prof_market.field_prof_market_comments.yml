@@ -1,0 +1,19 @@
+uuid: fabcf8c8-0df4-4e64-bb7e-3215ae1a4cea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_prof_market_comments
+    - profile.type.prof_market
+id: profile.prof_market.field_prof_market_comments
+field_name: field_prof_market_comments
+entity_type: profile
+bundle: prof_market
+label: 'Maketing Comments'
+description: 'Comments related to user about marketing'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

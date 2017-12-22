@@ -4,8 +4,8 @@ sql_signature: false
 ui:
   show:
     additional_queries: false
-    advanced_column: false
-    master_display: false
+    advanced_column: true
+    master_display: true
     performance_statistics: false
     preview_information: true
     sql_query:
@@ -46,3 +46,4 @@ field_rewrite_elements:
   s: S
 _core:
   default_config_hash: RaRd9EIcwA4u3qCSRLL8EnCicbda1kV__ASmVbyehvQ
+langcode: es

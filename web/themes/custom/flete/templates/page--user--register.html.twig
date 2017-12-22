@@ -1,0 +1,40 @@
+<div id="auth_box" class="register">
+  <div id="top_part">
+    <h1 id="the_logo">
+      <a href="{{ url('<front>') }}">
+        <img src="/sites/default/files/flete24/flete24long-green280x65.png" alt="{{ site_name }}" />
+      </a>
+    </h1>
+  </div>
+
+  <div id="middle_part">
+    <h2 class="title">Crear una cuenta</h2>
+
+    {{ messages }}
+
+    {{ page.content }}
+  </div>
+
+  <div id="bottom_part">
+  <div class="login_link">
+    <h4>
+      <a href="{{ path('user.login') }}">{{ 'Ingresar a Flete24'|t }}</a>
+    </h4>
+  </div>
+
+  <div class="password_link">
+    <h4>
+      <a href="{{ path('user.pass') }}">{{ '¿Olvido su contraseña?'|t }}</a>
+    </h4>
+  </div>
+
+  <div class="back_link">
+    <h4>
+      <a href="{{ url('<front>') }}">
+      <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        {{ 'Regresar'|t }}
+        </a>
+    </h4>
+  </div>
+</div>
+</div>

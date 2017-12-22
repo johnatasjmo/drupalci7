@@ -1,7 +1,32 @@
-uuid: bdac9148-aa15-464b-b356-3ae2f50be07d
-langcode: en
+uuid: 171975cb-4677-4af3-9c29-aa417ef696e3
+langcode: es
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - hide_revision_field
+third_party_settings:
+  hide_revision_field:
+    personalization:
+      50:
+        hide: false
+      51:
+        hide: false
+      52:
+        hide: false
+      53:
+        hide: false
+      54:
+        hide: false
+      55:
+        hide: false
+      56:
+        hide: false
+      57:
+        hide: false
+      58:
+        hide: false
+      63:
+        hide: false
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
 name: Article

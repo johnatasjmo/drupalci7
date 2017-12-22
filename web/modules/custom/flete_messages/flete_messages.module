@@ -1,0 +1,35 @@
+<?php
+
+/**
+ * @file
+ * Contains flete_messages.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function flete_messages_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the flete_messages module.
+    case 'help.page.flete_messages':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Automatic messages for events within Flete') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function flete_messages_theme() {
+  return [
+    'flete_messages' => [
+      'render element' => 'children',
+    ],
+  ];
+}

@@ -1,0 +1,19 @@
+uuid: ca9c50d3-1ba3-45ed-a275-f5f5eddee712
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_des_sublocality
+    - node.type.carga
+id: node.carga.field_carga_des_sublocality
+field_name: field_carga_des_sublocality
+entity_type: node
+bundle: carga
+label: 'Carga Des Sublocality'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

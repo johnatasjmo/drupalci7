@@ -1,0 +1,19 @@
+uuid: 5284e95c-08ad-4150-a523-9bae30f546ef
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+id: comment.field_carga_comment_body
+field_name: field_carga_comment_body
+entity_type: comment
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

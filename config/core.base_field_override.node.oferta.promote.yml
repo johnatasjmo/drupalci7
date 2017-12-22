@@ -1,0 +1,22 @@
+uuid: f4c9593d-ef74-453f-ab94-30eabef4a038
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.oferta
+id: node.oferta.promote
+field_name: promote
+entity_type: node
+bundle: oferta
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

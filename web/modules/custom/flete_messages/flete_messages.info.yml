@@ -1,0 +1,5 @@
+name: flete_messages
+type: module
+description: Automatic messages for events within Flete
+core: 8.x
+package: Custom

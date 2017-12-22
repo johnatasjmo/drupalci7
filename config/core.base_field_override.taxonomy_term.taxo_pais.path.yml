@@ -1,0 +1,20 @@
+uuid: f27d750a-09f1-407c-ad6a-00afb3168a3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taxo_pais
+  module:
+    - path
+id: taxonomy_term.taxo_pais.path
+field_name: path
+entity_type: taxonomy_term
+bundle: taxo_pais
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

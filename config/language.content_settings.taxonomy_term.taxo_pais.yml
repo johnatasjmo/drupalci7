@@ -1,0 +1,16 @@
+uuid: 825ebaf5-5ec8-4d10-8576-18d5630c9ac1
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taxo_pais
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: taxonomy_term.taxo_pais
+target_entity_type_id: taxonomy_term
+target_bundle: taxo_pais
+default_langcode: site_default
+language_alterable: false

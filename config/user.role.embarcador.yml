@@ -1,0 +1,19 @@
+uuid: 969b129f-dd9a-4f17-8c90-1c9aeb518f84
+langcode: en
+status: true
+dependencies: {  }
+id: embarcador
+label: Embarcador
+weight: 3
+is_admin: null
+permissions:
+  - 'access geocoder autocomplete'
+  - 'create carga content'
+  - 'delete own carga content'
+  - 'edit own carga content'
+  - 'update own prof_comp profile'
+  - 'update own prof_doc profile'
+  - 'update own prof_user profile'
+  - 'view own prof_comp profile'
+  - 'view own prof_doc profile'
+  - 'view own prof_user profile'

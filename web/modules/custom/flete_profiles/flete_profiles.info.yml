@@ -1,0 +1,5 @@
+name: flete_profiles
+type: module
+description: Changes login, registration, reset and profiles for transportista and embarcador
+core: 8.x
+package: Flete

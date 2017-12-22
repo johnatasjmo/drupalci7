@@ -1,0 +1,9 @@
+uuid: 80eb8e73-93a2-4137-969d-1aa5f1889966
+langcode: en
+status: true
+dependencies: {  }
+id: embarcador
+label: Embarcador
+role: embarcador
+field: field_user_role
+field_value: '0'

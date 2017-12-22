@@ -1,0 +1,18 @@
+uuid: dda1fbd7-35d2-4a25-b7b6-49115be299cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taxo_status
+id: taxonomy_term.taxo_status.name
+field_name: name
+entity_type: taxonomy_term
+bundle: taxo_status
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

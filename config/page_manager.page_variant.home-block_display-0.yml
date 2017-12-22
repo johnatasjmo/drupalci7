@@ -1,0 +1,37 @@
+uuid: 602ce412-e873-4c78-ab96-5326ab6e8f0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.home
+  content:
+    - 'block_content:basic:bbdf762d-4cb4-4c2a-a970-88a10e2ff22a'
+  module:
+    - block_content
+id: home-block_display-0
+label: Home
+variant: block_display
+variant_settings:
+  blocks:
+    7a4b97fd-c6ce-4af2-9622-636fc1c17ab6:
+      id: 'block_content:bbdf762d-4cb4-4c2a-a970-88a10e2ff22a'
+      label: Jumbotron
+      provider: block_content
+      label_display: '0'
+      status: true
+      info: ''
+      view_mode: full
+      region: top
+      weight: 0
+      uuid: 7a4b97fd-c6ce-4af2-9622-636fc1c17ab6
+      context_mapping: {  }
+  id: block_display
+  uuid: 404dc98c-e208-4d11-b469-50deabbd81e7
+  label: null
+  weight: 0
+  page_title: ''
+page: home
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

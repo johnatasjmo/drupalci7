@@ -1,0 +1,43 @@
+uuid: e61f4b2c-0529-4779-964f-aed2a0a1a977
+langcode: en
+status: true
+dependencies:
+  module:
+    - hide_revision_field
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  hide_revision_field:
+    hide: true
+    personalizable: true
+    personalization:
+      50:
+        hide: true
+      51:
+        hide: true
+      52:
+        hide: true
+      53:
+        hide: true
+      54:
+        hide: true
+      55:
+        hide: true
+      56:
+        hide: true
+      57:
+        hide: true
+      58:
+        hide: true
+      63:
+        hide: true
+name: Carga
+type: carga
+description: ''
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

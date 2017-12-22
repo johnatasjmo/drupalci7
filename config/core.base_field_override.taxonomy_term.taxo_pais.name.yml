@@ -1,0 +1,18 @@
+uuid: bc6caf04-5496-46fc-b3c8-2defa2254f96
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.taxo_pais
+id: taxonomy_term.taxo_pais.name
+field_name: name
+entity_type: taxonomy_term
+bundle: taxo_pais
+label: Name
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

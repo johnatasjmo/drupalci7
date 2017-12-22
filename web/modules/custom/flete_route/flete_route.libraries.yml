@@ -1,0 +1,11 @@
+route:
+  css:
+    theme:
+      css/flete-route.css: {}
+route-js:
+  js:
+    js/flete_route.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupalSettings

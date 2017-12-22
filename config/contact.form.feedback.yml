@@ -1,5 +1,5 @@
-uuid: f39b65c8-1c99-4884-870c-d2bcbad417e6
-langcode: en
+uuid: 72689be9-0ed9-4eea-a904-9d0cff3ad73b
+langcode: es
 status: true
 dependencies: {  }
 _core:
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - jmo@logisticsmaven.com
+  - flete@gmail.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

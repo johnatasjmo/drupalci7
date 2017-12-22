@@ -1,0 +1,14 @@
+uuid: 036bde8d-8a97-4e2b-987f-986f36c95972
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.transportista
+  module:
+    - user
+id: user_add_role_action.transportista
+label: 'Add the Transportista role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: transportista

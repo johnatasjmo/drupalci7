@@ -1,0 +1,14 @@
+uuid: 51a016e7-ec6c-4c05-ac8d-1ef0116884f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.embarcador
+  module:
+    - user
+id: user_remove_role_action.embarcador
+label: 'Remove the Embarcador role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: embarcador

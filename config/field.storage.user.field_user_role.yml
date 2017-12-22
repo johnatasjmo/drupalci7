@@ -1,0 +1,18 @@
+uuid: 45cc6ec5-7b3d-4a0c-82a0-67f7163792c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.field_user_role
+field_name: field_user_role
+entity_type: user
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

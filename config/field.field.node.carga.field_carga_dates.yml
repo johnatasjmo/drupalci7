@@ -1,0 +1,26 @@
+uuid: d0642c64-a1c6-437b-8fa2-3bf25074874a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_dates
+    - node.type.carga
+  module:
+    - datetime_range
+id: node.carga.field_carga_dates
+field_name: field_carga_dates
+entity_type: node
+bundle: carga
+label: Disponibilidad
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: relative
+    default_end_date: '+5 days'
+default_value_callback: ''
+settings: {  }
+field_type: daterange

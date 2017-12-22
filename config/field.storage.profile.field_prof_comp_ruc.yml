@@ -1,0 +1,21 @@
+uuid: 87cf6b1a-14ab-4424-8887-912c8487d140
+langcode: es
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_prof_comp_ruc
+field_name: field_prof_comp_ruc
+entity_type: profile
+type: string
+settings:
+  max_length: 30
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

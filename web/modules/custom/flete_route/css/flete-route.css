@@ -1,0 +1,9 @@
+#block-routeplanneraddressfield {
+  display: none;
+}
+#edit-field-carga-driving-0-value, #edit-field-carga-distance-0-value{
+  display: none;
+}
+label[for="edit-field-carga-driving-0-value"], label[for="edit-field-carga-distance-0-value"]{
+  display: none;
+}

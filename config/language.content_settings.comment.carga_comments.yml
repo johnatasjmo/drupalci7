@@ -1,0 +1,11 @@
+uuid: fce010a6-5a96-4885-9b64-3d9779c0d3fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.carga_comments
+id: comment.carga_comments
+target_entity_type_id: comment
+target_bundle: carga_comments
+default_langcode: site_default
+language_alterable: false

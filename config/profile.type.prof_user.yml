@@ -1,0 +1,16 @@
+uuid: 228e6fae-1021-47e9-a84a-5f8439e47176
+langcode: es
+status: true
+dependencies: {  }
+id: prof_user
+label: Usuario
+registration: true
+multiple: false
+roles:
+  embarcador: embarcador
+  transportista: transportista
+  authenticated: '0'
+  administrator: '0'
+weight: 0
+use_revisions: false
+description: ''

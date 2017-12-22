@@ -1,0 +1,23 @@
+uuid: a1c8da82-e740-4b17-9bf2-12178b3806bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_prof_market_vip
+    - profile.type.prof_market
+id: profile.prof_market.field_prof_market_vip
+field_name: field_prof_market_vip
+entity_type: profile
+bundle: prof_market
+label: VIP
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,20 @@
+uuid: 0b5b26d8-b297-4353-babb-7ede72c1ba7d
+langcode: en
+status: true
+dependencies:
+  theme:
+    - flete
+_core:
+  default_config_hash: 1TQP4b3ZnlzvIH9bj6cpCz_SyUHdJjLQkZnHpikjjhw
+id: flete_page_title
+theme: flete
+region: header
+weight: 0
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

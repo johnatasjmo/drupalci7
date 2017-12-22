@@ -1,0 +1,16 @@
+uuid: f9d2b5d8-5b39-4670-86a2-2507bf147a6e
+langcode: en
+status: true
+dependencies: {  }
+id: prof_market
+label: Marketing
+registration: false
+multiple: false
+roles:
+  administrator: administrator
+  authenticated: '0'
+  embarcador: '0'
+  transportista: '0'
+weight: 0
+use_revisions: false
+description: ''

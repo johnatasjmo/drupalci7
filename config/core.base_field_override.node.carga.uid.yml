@@ -1,0 +1,20 @@
+uuid: b9f9a27b-7498-41d9-a708-00103edb8dc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.carga
+id: node.carga.uid
+field_name: uid
+entity_type: node
+bundle: carga
+label: 'Authored by'
+description: 'The username of the content author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\node\Entity\Node::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

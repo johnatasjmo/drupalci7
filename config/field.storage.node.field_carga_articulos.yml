@@ -1,0 +1,21 @@
+uuid: cb7b9065-641e-402f-8ed6-b7f891bdc0ce
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_carga_articulos
+field_name: field_carga_articulos
+entity_type: node
+type: string
+settings:
+  max_length: 120
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

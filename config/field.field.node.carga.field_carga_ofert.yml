@@ -1,0 +1,28 @@
+uuid: 7e7f7699-d8d2-443b-93d3-213fc81dc50c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_ofert
+    - node.type.carga
+    - node.type.oferta
+id: node.carga.field_carga_ofert
+field_name: field_carga_ofert
+entity_type: node
+bundle: carga
+label: Nominado
+description: 'Oferta nominada a esta Carga'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      oferta: oferta
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

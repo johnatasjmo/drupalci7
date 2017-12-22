@@ -1,5 +1,5 @@
-uuid: e0fe072d-e81e-48e0-a9cc-846ff1ec568f
-langcode: en
+uuid: 97847065-ea8d-46a5-a819-37a0fed68585
+langcode: es
 status: true
 dependencies: {  }
 _core:
@@ -14,3 +14,4 @@ permissions:
   - 'access site-wide contact form'
   - 'search content'
   - 'use text format restricted_html'
+  - 'view revision field'

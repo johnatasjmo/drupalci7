@@ -1,0 +1,30 @@
+uuid: c5c78666-2ae5-4d0c-830b-b791ca7ae9fb
+langcode: es
+status: true
+dependencies:
+  config:
+    - field.field.profile.prof_comp.field_prof_comp_empresa
+    - field.field.profile.prof_comp.field_prof_comp_ruc
+    - profile.type.prof_comp
+id: profile.prof_comp.default
+targetEntityType: profile
+bundle: prof_comp
+mode: default
+content:
+  field_prof_comp_empresa:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_prof_comp_ruc:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden: {  }

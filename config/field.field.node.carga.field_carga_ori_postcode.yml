@@ -1,0 +1,19 @@
+uuid: 81e47494-a90e-4ef4-9101-c96f9d11c901
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_carga_ori_postcode
+    - node.type.carga
+id: node.carga.field_carga_ori_postcode
+field_name: field_carga_ori_postcode
+entity_type: node
+bundle: carga
+label: 'Carga Ori Postcode'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

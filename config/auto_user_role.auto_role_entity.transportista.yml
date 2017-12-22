@@ -1,0 +1,9 @@
+uuid: 1bf64614-9551-41fe-9aa7-91b62fe4810f
+langcode: en
+status: true
+dependencies: {  }
+id: transportista
+label: Transportista
+role: transportista
+field: field_user_role
+field_value: '1'

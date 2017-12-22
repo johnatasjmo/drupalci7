@@ -1,5 +1,5 @@
-uuid: 88f15268-3a5e-49a0-a9db-8f4d5065bb4b
-langcode: en
+uuid: 38fdd229-259b-4d39-bff2-ed77fdf6b19c
+langcode: es
 status: true
 dependencies:
   config:
@@ -16,7 +16,7 @@ bundle: article
 label: Body
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

@@ -1,0 +1,42 @@
+uuid: 00c64ed1-4b1c-4a4b-8abb-e2610dde7da1
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+    - route_planner
+    - system
+  theme:
+    - flete
+id: routeplanneraddressfield
+theme: flete
+region: content_top
+weight: -7
+provider: null
+plugin: route_target
+settings:
+  id: route_target
+  label: 'Route Planner Address Field'
+  provider: route_planner
+  label_display: '0'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      carga: carga
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/node/*/delete\r\n"
+    negate: true
+    context_mapping: {  }

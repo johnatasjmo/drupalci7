@@ -1,5 +1,5 @@
-uuid: 36af3f7f-efc4-4190-9eac-77754f77dd8b
-langcode: en
+uuid: 6da7aa33-a74d-4d7d-b6f8-1c7453737c5b
+langcode: es
 status: true
 dependencies:
   module:
@@ -13,9 +13,9 @@ field_name: user_picture
 entity_type: user
 type: image
 settings:
-  uri_scheme: public
+  uri_scheme: private
   default_image:
-    uuid: null
+    uuid: ''
     alt: ''
     title: ''
     width: null

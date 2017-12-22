@@ -1,0 +1,38 @@
+schemas:
+  bootstrap: 8000
+  flete: 8000
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'http://localhost:32781/themes/custom/flete/favicon.ico'
+  use_default: 1
+features:
+  comment_user_picture: 1
+  comment_user_verification: 1
+  favicon: 1
+  node_user_picture: 1
+logo:
+  path: ''
+  url: ''
+  use_default: 0
+cdn_provider_import_data: ''
+table_responsive: '1'
+breadcrumb_title: 0
+navbar_position: fixed-top
+table_condensed: 1
+region_wells:
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content_top: ''
+  content_right: ''
+  content_left: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  footer: well
+table_bordered: 1
+table: ''
+langcode: es
