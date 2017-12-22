@@ -5,3 +5,10 @@ config:
   env: dev
   site: drupalci7
   id: 0036452f-add7-4c36-9b09-a58b0278e458
+
+tooling:
+  behat:
+    service: appserver
+    description: Run behat tests locally.
+    cmd:
+      - /app/vendor/bin/behat
